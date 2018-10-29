@@ -7,7 +7,8 @@ import org.junit.Test
 
 class PrimeFactorsTest {
     @Test fun factors() {
-        Assert.assertThat(factorsOf(1), `is`(emptyList()))
+        assertThat(factorsOf(1), `is`(emptyList()))
+        assertThat(factorsOf(2), `is`(listOf(2)))
     }
 
     private fun factorsOf(n: Int): List<Int> {
