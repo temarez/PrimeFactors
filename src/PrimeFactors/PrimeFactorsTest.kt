@@ -12,6 +12,9 @@ class PrimeFactorsTest {
     }
 
     private fun factorsOf(n: Int): List<Int> {
-        return emptyList()
+        val factors = mutableListOf<Int>()
+        if (n>1)
+            factors.add(2)
+        return factors
     }
 }
