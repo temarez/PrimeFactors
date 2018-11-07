@@ -1,7 +1,6 @@
 package PrimeFactors
 
 import org.hamcrest.CoreMatchers.*
-import org.junit.Assert
 import org.junit.Assert.*
 import org.junit.Test
 
@@ -16,12 +15,12 @@ class PrimeFactorsTest {
     private fun factorsOf(nn: Int): List<Int> {
         var n = nn
         val factors = mutableListOf<Int>()
-        if (n>1) {
-            if (n%2 == 0) {
+        if (n > 1) {
+            if (n % 2 == 0) {
                 factors.add(2)
                 n /= 2
             }
-            if (n>1)
+            if (n > 1)
                 factors.add(n)
         }
         return factors
