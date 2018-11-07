@@ -20,7 +20,7 @@ class PrimeFactorsTest {
         var remainder = n
         val factors = mutableListOf<Int>()
         if (remainder > 1) {
-            if (remainder % 2 == 0) {
+            while (remainder % 2 == 0) {
                 factors.add(2)
                 remainder /= 2
             }
