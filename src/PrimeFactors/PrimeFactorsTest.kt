@@ -12,16 +12,16 @@ class PrimeFactorsTest {
         assertThat(factorsOf(4), `is`(listOf(2, 2)))
     }
 
-    private fun factorsOf(nn: Int): List<Int> {
-        var n = nn
+    private fun factorsOf(n: Int): List<Int> {
+        var remainder = n
         val factors = mutableListOf<Int>()
-        if (n > 1) {
-            if (n % 2 == 0) {
+        if (remainder > 1) {
+            if (remainder % 2 == 0) {
                 factors.add(2)
-                n /= 2
+                remainder /= 2
             }
-            if (n > 1)
-                factors.add(n)
+            if (remainder > 1)
+                factors.add(remainder)
         }
         return factors
     }
