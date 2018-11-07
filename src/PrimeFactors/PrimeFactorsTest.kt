@@ -10,6 +10,10 @@ class PrimeFactorsTest {
         assertThat(factorsOf(2), `is`(listOf(2)))
         assertThat(factorsOf(3), `is`(listOf(3)))
         assertThat(factorsOf(4), `is`(listOf(2, 2)))
+        assertThat(factorsOf(5), `is`(listOf(5)))
+        assertThat(factorsOf(6), `is`(listOf(2, 3)))
+        assertThat(factorsOf(7), `is`(listOf(7)))
+        assertThat(factorsOf(8), `is`(listOf(2, 2, 2)))
     }
 
     private fun factorsOf(n: Int): List<Int> {
@@ -20,9 +24,9 @@ class PrimeFactorsTest {
                 factors.add(2)
                 remainder /= 2
             }
-            if (remainder > 1)
-                factors.add(remainder)
         }
+        if (remainder > 1)
+            factors.add(remainder)
         return factors
     }
 }
